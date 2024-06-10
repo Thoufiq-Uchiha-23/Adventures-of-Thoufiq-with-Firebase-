@@ -1,6 +1,10 @@
-import React from 'react'
+import React, {useState} from 'react'
+import { getAuth } from 'firebase/auth'
 
 const Signup = () => {
+  const [email, setEmail] = useState()
+  const [password, setPassword] = useState("")
+
   return (
     <div className='signup-page'>
         <label>Email</label>
