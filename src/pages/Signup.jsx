@@ -9,7 +9,7 @@ const Signup = () => {
   const [password, setPassword] = useState("");
 
   const createUser = () => {
-    createUserWithEmailAndPassword(auth, email, password);
+    createUserWithEmailAndPassword(auth, email, password).then(value => alert("Success"));
   };
 
   return (
@@ -24,7 +24,7 @@ const Signup = () => {
       onChange={(e) => setPassword(e.target.value)} 
       value={password}
       type="password" placeholder="Enter your password here" />
-      <button>Sign Up</button>
+      <button onClick={createUser}>Sign Up</button>
     </div>
   );
 };
