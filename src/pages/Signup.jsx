@@ -1,11 +1,16 @@
 import React, {useState} from 'react'
-import { getAuth } from 'firebase/auth'
+import { getAuth, createUserWithEmailAndPassword } from 'firebase/auth'
+import { app } from '../firebase'
 
 const auth = getAuth(app)
 
 const Signup = () => {
   const [email, setEmail] = useState()
   const [password, setPassword] = useState("")
+
+  const createUser = () => {
+    createUserWithEmailAndPassword(auth, email, password)
+  }
 
   return (
     <div className='signup-page'>
