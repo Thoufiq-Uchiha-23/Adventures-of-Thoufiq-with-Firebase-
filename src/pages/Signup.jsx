@@ -10,6 +10,7 @@ const Signup = () => {
 
   const createUser = () => {
     createUserWithEmailAndPassword(auth, email, password).then((value) => alert("Success"));
+    // Success
   };
 
   return (
