@@ -5,11 +5,11 @@ import { app } from "../firebase";
 const auth = getAuth(app);
 
 const Signup = () => {
-  const [email, setEmail] = useState();
+  const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
   const createUser = () => {
-    createUserWithEmailAndPassword(auth, email, password).then(value => alert("Success"));
+    createUserWithEmailAndPassword(auth, email, password).then((value) => alert("Success"));
   };
 
   return (
