@@ -15,6 +15,7 @@ const SigninPage = () => {
 
     return (
         <div>
+            {/* Sign in Page Authentication */}
             <h1>Signin Page</h1>
             <label>Enter your email</label>
             <input type="email" onChange={(e) => setEmail(e.target.value)} value={email} placeholder="Enter your email here" />
