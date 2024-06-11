@@ -1,9 +1,17 @@
 import React, {useState} from "react";
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth"
+import { app } from "../firebase"
+
+const auth = getAuth(app)
 
 const SigninPage = () => {
     const [email, setEmail] = useState("")
     const [password, setPassword] = useState("")
+
+    const signinUser = () => {
+        signInWithEmailAndPassword(auth, email, password).then((value) => console.log("Signin success"))
+        .catch(err =>  console.log(err))
+    }
 
     return (
         <div>
