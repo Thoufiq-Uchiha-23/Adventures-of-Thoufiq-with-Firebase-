@@ -20,7 +20,7 @@ const SigninPage = () => {
             <input type="email" onChange={(e) => setEmail(e.target.value)} value={email} placeholder="Enter your email here" />
             <label>Enter your password</label>
             <input type="password" onChange={(e) => setPassword(e.target.value)} value={password} placeholder="Enter your password here" />
-            <button>Sign me in</button>
+            <button onClick={signinUser}>Sign me in</button>
         </div>
     )
 }
